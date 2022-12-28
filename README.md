@@ -60,3 +60,9 @@ INSERT INTO weather (city, degrees, precipitation, humidity, wind)
 VALUES ('DUBAI', 50.8, 15.1, 78.0, 1);
 
 ```
+
+
+### To do:
+- Fix bootstrap issues
+- icons
+- images
