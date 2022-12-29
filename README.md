@@ -72,3 +72,6 @@ VALUES ('DUBAI', 50.8, 15.1, 78.0, 1, "Sunny");
 - available cities should be returned from backend for the tip
 - add router structure
 - backend frontend JSON structure
+
+## Example
+![image](https://user-images.githubusercontent.com/33628345/209971954-1c4f6ff0-092b-4a2d-97d5-2d8a96f3e608.png)
