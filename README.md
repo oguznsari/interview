@@ -62,8 +62,7 @@ VALUES ('DUBAI', 50.8, 15.1, 78.0, 1, "Sunny");
 
 ```
 ## DB Schema
-![image](https://user-images.githubusercontent.com/33628345/210004221-fbcd5fbe-36eb-49e1-b517-14b6e66474d4.png)
-
+![image](https://user-images.githubusercontent.com/33628345/210004333-7476a8f3-15cb-4242-90af-e81cb54b7339.png)
 
 
 ### To do:
