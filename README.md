@@ -64,16 +64,11 @@ VALUES ('DUBAI', 50.8, 15.1, 78.0, 1, "Sunny");
 
 
 ### To do:
-- Fix bootstrap issues
-- icons
-- images
-- cards looks ok
-- but check above - City enter text and button;
 - City at the top uçur
-- submiti de uçur sade ve şık gözüksün
-- js controller send api to backend
+- May remove submit button and make form look nicer
+- add JS frontend backend API structure
 - catch it in backend & return reponse
 - maybe return json and handle UI frontend js.
-- available cities return from backend
+- available cities should be returned from backend for the tip
 - add router structure
-- frontende böyle html göndermek saçma datayı json olarak göndericen UI da js ile toplayacaksın.
+- backend frontend JSON structure
