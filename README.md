@@ -30,6 +30,7 @@ create table weather.weather
     precipitation DOUBLE                 not null,
     humidity      DOUBLE                 not null,
     wind          int                    not null,
+    status        VARCHAR(50)                    ,
     updated_at    DATETIME default NOW() not null,
     created_at    DATETIME default NOW() not null,
     constraint weather_pk
@@ -38,26 +39,26 @@ create table weather.weather
 
 USE weather;
 
-INSERT INTO weather (city, degrees, precipitation, humidity, wind)
-VALUES ('ISTANBUL', 35.1, 2.7, 45.2, 5);
-INSERT INTO weather (city, degrees, precipitation, humidity, wind)
-VALUES ('LONDON', 2.0, 60.8, 78.4, 8);
-INSERT INTO weather (city, degrees, precipitation, humidity, wind)
-VALUES ('NEW YORK', 0.9, 40.0, 46.5, 9);
-INSERT INTO weather (city, degrees, precipitation, humidity, wind)
-VALUES ('SYDNEY', 35.2, 15.0, 63.5, 1);
-INSERT INTO weather (city, degrees, precipitation, humidity, wind)
-VALUES ('CHICAGO', 1.5, 35.0, 15.8, 15);
-INSERT INTO weather (city, degrees, precipitation, humidity, wind)
-VALUES ('ROME', 32.2, 12.3, 15.3, 3);
-INSERT INTO weather (city, degrees, precipitation, humidity, wind)
-VALUES ('TOKYO', 12.5, 40.2, 50.4, 6);
-INSERT INTO weather (city, degrees, precipitation, humidity, wind)
-VALUES ('PARIS', 24.4, 30.1, 61.2, 4);
-INSERT INTO weather (city, degrees, precipitation, humidity, wind)
-VALUES ('HONG KONG', 30.8, 10.3, 56.6, 0);
-INSERT INTO weather (city, degrees, precipitation, humidity, wind)
-VALUES ('DUBAI', 50.8, 15.1, 78.0, 1);
+INSERT INTO weather (city, degrees, precipitation, humidity, wind, status)
+VALUES ('ISTANBUL', 35.1, 2.7, 45.2, 5, "Sunny");
+INSERT INTO weather (city, degrees, precipitation, humidity, wind, status)
+VALUES ('LONDON', 2.0, 60.8, 78.4, 8, "Rainy");
+INSERT INTO weather (city, degrees, precipitation, humidity, wind, status)
+VALUES ('NEW YORK', 0.9, 40.0, 46.5, 9, "Snow");
+INSERT INTO weather (city, degrees, precipitation, humidity, wind, status)
+VALUES ('SYDNEY', 35.2, 15.0, 63.5, 1, "Sunny");
+INSERT INTO weather (city, degrees, precipitation, humidity, wind, status)
+VALUES ('CHICAGO', 1.5, 35.0, 15.8, 15, "Snow");
+INSERT INTO weather (city, degrees, precipitation, humidity, wind, status)
+VALUES ('ROME', 32.2, 12.3, 15.3, 3, "Sunny");
+INSERT INTO weather (city, degrees, precipitation, humidity, wind, status)
+VALUES ('TOKYO', 12.5, 40.2, 50.4, 6, "Rainy");
+INSERT INTO weather (city, degrees, precipitation, humidity, wind, status)
+VALUES ('PARIS', 24.4, 30.1, 61.2, 4, "Cloudly");
+INSERT INTO weather (city, degrees, precipitation, humidity, wind, status)
+VALUES ('HONG KONG', 30.8, 10.3, 56.6, 0, "Sunny");
+INSERT INTO weather (city, degrees, precipitation, humidity, wind, status)
+VALUES ('DUBAI', 50.8, 15.1, 78.0, 1, "Sunny");
 
 ```
 
@@ -66,3 +67,13 @@ VALUES ('DUBAI', 50.8, 15.1, 78.0, 1);
 - Fix bootstrap issues
 - icons
 - images
+- cards looks ok
+- but check above - City enter text and button;
+- City at the top uçur
+- submiti de uçur sade ve şık gözüksün
+- js controller send api to backend
+- catch it in backend & return reponse
+- maybe return json and handle UI frontend js.
+- available cities return from backend
+- add router structure
+- frontende böyle html göndermek saçma datayı json olarak göndericen UI da js ile toplayacaksın.

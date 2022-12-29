@@ -19,6 +19,20 @@ class Database {
         $statement->execute();
         return $statement;
     }
+
+    public function getWeatherConditions($matches) {
+        $query = "SELECT * FROM weather WHERE city IN ('"
+            . implode("','", $matches)
+            . "')";
+
+        return $this->query($query)->fetchAll();
+    }
+
+    public function getAllCities() {
+        $query = "SELECT city FROM weather";
+
+        return $this->query($query)->fetchAll(PDO::FETCH_COLUMN);
+    }
 }
 
 ?>
