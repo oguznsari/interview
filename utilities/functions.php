@@ -2,7 +2,16 @@
 
 class functions
 {
-    public function matchArrays($candidateArray, $actualArray)
+    /**
+     * Function that matches array elements with 75% accuracy in case of typo
+     * Returns matched actualArray values
+     *
+     * @param array $candidateArray
+     * @param array $actualArray
+     *
+     * @return array
+     */
+    public function matchArrays(array $candidateArray, array $actualArray): array
     {
         $match = [];
         foreach ($candidateArray as $candidate) {
@@ -26,7 +35,15 @@ class functions
         return $match;
     }
 
-    public function templateSubstitution($template, $data)
+    /**
+     * Function that replaces template placeholders and returns
+     *
+     * @param string $template
+     * @param array $data
+     *
+     * @return string
+     */
+    public function templateSubstitution(string $template, array $data): string
     {
         $placeholders = array_map(function ($placeholder) {
             return strtoupper("{{$placeholder}}");

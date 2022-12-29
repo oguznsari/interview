@@ -12,7 +12,7 @@ $db = new Database($config['database'], 'root', 'NewPassword');
 
 $availableCities = $db->getAllCities();
 
-if($_SERVER['REQUEST_METHOD'] == 'GET') {
+if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $response = '';
     $errors = [];
 

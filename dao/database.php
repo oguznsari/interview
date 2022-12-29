@@ -1,12 +1,11 @@
 <?php
 
-class Database {
+class Database
+{
     public $connection;
 
     public function __construct($config, $username = 'root', $password = '')
     {
-
-
         $dsn = 'mysql:' . http_build_query($config, '', ';');
 
         $this->connection = new PDO($dsn, $username, $password, [
@@ -14,13 +13,29 @@ class Database {
         ]);
     }
 
-    public function query($query) {
+    /**
+     * Function to execute db query
+     *
+     * @param string $query
+     *
+     * @return false|PDOStatement
+     */
+    public function query(string $query)
+    {
         $statement = $this->connection->prepare($query);
         $statement->execute();
         return $statement;
     }
 
-    public function getWeatherConditions($matches) {
+    /**
+     * Function that retrieves weather conditions from database for the cities
+     *
+     * @param array $matches
+     *
+     * @return array|false
+     */
+    public function getWeatherConditions(array $matches)
+    {
         $query = "SELECT * FROM weather WHERE city IN ('"
             . implode("','", $matches)
             . "')";
@@ -28,7 +43,13 @@ class Database {
         return $this->query($query)->fetchAll();
     }
 
-    public function getAllCities() {
+    /**
+     * Function that retrieves all city names available in out database
+     *
+     * @return array|false
+     */
+    public function getAllCities()
+    {
         $query = "SELECT city FROM weather";
 
         return $this->query($query)->fetchAll(PDO::FETCH_COLUMN);

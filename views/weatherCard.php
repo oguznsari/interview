@@ -1,6 +1,6 @@
 <?php
 
-return '<div class="col-11 col-md-6 col-lg-4 p-4" style="min-width: 350px;">
+return '<div class="col-9 col-md-5 col-lg-4 p-3" style="min-width: 300px;">
             <div class="row d-flex justify-content-center align-items-center">
               <div class="col-11">
                 <div class="card" style="color: #4B515D; border-radius: 35px; background-color: {BGCOLOR};">
