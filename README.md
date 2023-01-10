@@ -48,6 +48,8 @@ INSERT INTO weather (city, degrees, precipitation, humidity, wind, status)
 VALUES ('DUBAI', 50.8, 15.1, 78.0, 1, "Sunny");
 
 ```
+## DB Schema
+![weatherschema](https://user-images.githubusercontent.com/33628345/210004498-fc0f0d65-becc-4677-ac30-3bf4168474a3.png)
 
 
 ### To do:
